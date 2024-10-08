@@ -1,19 +1,19 @@
-import { NgModule } from '@angular/core'; // Importar NgModule
-import { BrowserModule } from '@angular/platform-browser'; // Importar BrowserModule
-import { FormsModule } from '@angular/forms'; // Importar FormsModule
-import { AppComponent } from './app.component'; // Importar o componente principal
-import { ShoppingListComponent } from './shopping-list/shopping-list.component'; // Importar o componente da lista de compras
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms'; 
+import { AppComponent } from './app.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent, // Declarar o componente principal
-    ShoppingListComponent // Declarar o componente da lista de compras
+    AppComponent,
+    ShoppingListComponent
   ],
   imports: [
-    BrowserModule, // Importar BrowserModule
-    FormsModule // Importar FormsModule
+    BrowserModule,
+    FormsModule 
   ],
   providers: [],
-  bootstrap: [AppComponent] // Definir o componente inicial
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
