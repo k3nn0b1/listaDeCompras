@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Lista de Compras</h1>
+  <div>
+    <input 
+      type="text" 
+      placeholder="Nome do Item" 
+      [(ngModel)]="newItemName" 
+      required
+    />
+    <input 
+      type="number" 
+      min="1" 
+      [(ngModel)]="newItemQuantity" 
+      required
+    />
+    <button (click)="addItem()">Adicionar</button>
+  </div>
+
+  <ul>
+    <li *ngFor="let item of items; let i = index" [class.purchased]="item.purchased">
+      <span (click)="togglePurchased(item)">{{ item.name }} ({{ item.quantity }})</span>
+      <button (click)="removeItem(i)">Remover</button>
+    </li>
+  </ul>
+</div>
